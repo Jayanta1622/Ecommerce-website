@@ -29,6 +29,15 @@ p{
     color: #465b52;
     margin: 15px 0 20px 0;
 }
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .normal-button{
     /* background-color: #1d1f1e47; */
     padding: 10px 20px;
@@ -412,4 +421,10 @@ body{
     color: #fff;
     border-radius:0 5px 5px 0  ;
     white-space: nowrap;
+}
+footer{
+    justify-content: space-between;
+}
+.col{
+    gap: 15px;
 }
