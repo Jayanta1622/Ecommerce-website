@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
+a{
+    text-decoration: none;
+    color: #1a1a1a;
+}
 h1{
     font-size: 50px;
     line-height: 64px;
@@ -44,6 +48,17 @@ p{
     border-radius: 5px;
     cursor: pointer;
     border: none;
+    transition:0.2s ease-in-out ;
+}
+button.white{
+    color: #fff;
+    background-color: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    cursor: pointer;
+    border: 1 px solid #fff;
+    outline: none;
     transition:0.2s ease-in-out ;
 }
 .section-p1{
@@ -97,7 +112,7 @@ body{
     color: #088178; 
     
 }
-#navbar li a.active:after,#navbar li a:hover:after{
+#navbar li a.active:after,#navbar li a:hover::after{
     content:"";
     width: 30%;
     height: 2px;
@@ -190,7 +205,7 @@ body{
 /* product part */
 
 
-#product1{
+.product1{
     text-align: center;
 }
 #pro-container{
@@ -199,7 +214,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
 }
-#product1 .pro{
+.product1 .pro{
     width: 23%;
     min-height: 250px;
     padding: 10px 12px;
@@ -215,17 +230,20 @@ body{
     backface-visibility: hidden;
     transition: 0.4s ease-in-out;
 }
- .pro:hover .card-img{
+.pro .card-img:focus{
     transform: rotateY(-180deg);
 }
-#product1 .pro:hover{
+/* #product2 .pro:hover .card-img{
+    transform: rotateY(-180deg);
+} */
+.product1 .pro:hover{
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.04);
 }
-#product1 .pro img{
+.product1 .pro img{
     width: 100%;
     border-radius: 20px;
 }
-#product1 .pro .des {
+.product1 .pro .des {
     text-align: center;
     /* background-color: lightcoral; */
     background-image:url("img/des-background.jpg") ;
@@ -244,27 +262,30 @@ body{
     backface-visibility: hidden;
     transition: 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
  } 
- #product1 .pro:hover .des {
+.pro:focus .des {
     transform: rotateY(0);
 }
-#product1 .pro .des span{
+#product2 .pro:hover .des {
+    transform: rotateY(0);
+}
+.product1 .pro .des span{
     color: #cd1b1bbc;
     font-size: 50px;
 }
-#product1 .pro .des h5{
+.product1 .pro .des h5{
     padding-top: 7px;
     color: #1a1a1a;
     font-size: 22px;
 }
-#product1 .pro .des .star{
+.product1 .pro .des .star{
     font-size: 22px;
     color: rgb(245, 177, 7);
     padding: 10px;
 }
-#product1 .pro .des h4{
+.product1 .pro .des h4{
     color: #088178;
 }
-#product1 .pro .cart{
+.product1 .pro .cart{
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -284,7 +305,6 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: top 60px center;
-    /* padding: 30px 0px; */
     width: 100%;
     min-height: 60vh;
     display: flex;
@@ -411,7 +431,7 @@ body{
    height: 3.125rem;
    padding: 0 1.25rem;
    font-size: 14px;
-   width: 100%;
+   width: 60%;
    border: 1 px solid transparent;
    outline: none;
    border-radius:5px 0 0 5px  ;
