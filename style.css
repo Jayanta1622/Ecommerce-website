@@ -202,6 +202,29 @@ body{
     background-color: #fff2e5;
 }
 
+/* slider part  */
+ .slider{
+    height: 50vh;
+    width: 100%;
+    /* background-color: #1a1a1a; */
+    overflow: hidden;
+}
+#track{
+    display: flex;
+    margin-top:5vmin;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    /* top: 50%; */
+    transform: translate(0%,0%); 
+}
+#track > .image{
+    height: 40vmin;
+    width: 30vmin;
+    object-fit: cover;
+    object-position: center;
+} 
+
 /* product part */
 
 
